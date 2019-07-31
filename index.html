@@ -7,7 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    首页
-    <img src="./logo.jpg" alt="">
+    <!-- 首页
+    <img src="./logo.jpg" alt=""> -->
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        // 跨域
+        axios
+        .get('/http://localhost:3005/users') 
+        .then(res => res.data)
+        .then(users => console.log(users))
+
+        axios
+        .get('/users') 
+        .then(res => res.data)
+        .then(users => console.log(users))
+    </script>
+    
 </body>
 </html>
